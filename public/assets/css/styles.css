@@ -1,4 +1,5 @@
 /* ClarionXSI — shared design system, components, and responsive page layouts. */
 @import url('./base.css');
 @import url('./components.css');
+@import url('./hero-logo.css');
 @import url('./pages.css');

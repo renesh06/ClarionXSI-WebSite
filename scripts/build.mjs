@@ -16,7 +16,7 @@ await rm(dist,{recursive:true,force:true});
 await mkdir(dist,{recursive:true});
 await cp(path.join(root,'public'),dist,{recursive:true});
 const pages=[
-  ['index.html',{title:'Intelligence with a human purpose',body:homePage()}],
+  ['index.html',{title:'Intelligence with a human purpose',body:homePage().replace('assets/images/intelligence-orb.svg','assets/images/clarionxsi-logo.png').replace('A sculptural blue orbital form made from interconnected ribbons','Bright blue ClarionXSI logo with a glowing circuit-and-tree brain')}],
   ['products.html',{title:'Our products',page:'products',body:productsPage()}],
   ['about.html',{title:'Our company',page:'about',body:aboutPage()}],
   ['contact.html',{title:'Prepare an enquiry',page:'contact',body:contactPage()}],
