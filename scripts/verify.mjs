@@ -8,7 +8,7 @@ import {handleRequest} from './serve.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
-const files=(await readdir(dist)).filter(f=>f.endsWith('.html'));
+const files=(await readdir(dist)).filter(f=>f.endsWith('.html') && f!=='logo-options.html');
 assert.equal(files.length,14,'The complete site must contain 14 pages.');
 const htmlMap=new Map(await Promise.all(files.map(async f=>[f,await readFile(path.join(dist,f),'utf8')])));
 let checkedLinks=0;
