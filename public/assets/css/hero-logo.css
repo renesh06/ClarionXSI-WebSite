@@ -1,4 +1,22 @@
-.hero-art{background:radial-gradient(ellipse at 55% 35%,#123b93 0,transparent 60%),linear-gradient(140deg,#030713,#07183c);border-color:#172e66}
-.hero-art:before{opacity:.2;background-image:linear-gradient(#6c8ee933 1px,transparent 1px),linear-gradient(90deg,#6c8ee933 1px,transparent 1px)}
-.hero-art .art-topline,.hero-art .art-bottomline{color:#9eb8ed}
-.hero-art .orb-image{width:100%;height:100%;max-width:640px;object-fit:contain;padding:55px 24px 72px;mix-blend-mode:normal;transform:none;z-index:1}
+.hero-art{background:linear-gradient(145deg,#f7f9ff 0%,#eef4ff 54%,#e1ecff 100%);border-color:#dce5f3;overflow:hidden}
+.hero-art:before{opacity:.48;background-image:linear-gradient(#b9c9e822 1px,transparent 1px),linear-gradient(90deg,#b9c9e822 1px,transparent 1px);background-size:34px 34px}
+.brand-hero-visual{position:relative;display:grid;grid-template-columns:minmax(180px,.8fr) minmax(280px,1.2fr);align-items:center;min-height:470px;height:100%;padding:54px 48px;overflow:hidden}
+.brand-hero-copy{position:relative;z-index:4;align-self:center;max-width:250px;color:#14234a}
+.brand-hero-kicker{display:block;margin-bottom:20px;color:#4968e8;font-size:9px;font-weight:800;letter-spacing:.2em}
+.brand-hero-copy h2{margin:0;font-size:clamp(27px,3vw,45px);line-height:1.04;letter-spacing:-.055em;font-weight:700}
+.brand-hero-copy h2 em{font-style:normal;color:#4263ea}
+.brand-hero-copy p{max-width:220px;margin:22px 0 26px;color:#61708e;font-size:13px;line-height:1.65}
+.brand-hero-signature{display:inline-flex;align-items:center;gap:9px;color:#152550;font-size:10px;font-weight:800;letter-spacing:.12em}
+.brand-hero-signature:before{content:"";width:24px;height:1px;background:#5875ed}
+.brand-hero-stage{position:relative;display:flex;align-items:center;justify-content:center;min-height:380px;height:100%;isolation:isolate}
+.brand-hero-stage:before{content:"";position:absolute;width:76%;height:56%;border-radius:50%;background:radial-gradient(ellipse,#9bdfffaa 0%,#b7dcff55 43%,transparent 72%);filter:blur(12px);animation:brandHeroPulse 5s ease-in-out infinite}
+.brand-hero-glow{position:absolute;width:210px;height:210px;border-radius:50%;background:#4dcfff44;filter:blur(36px);animation:brandHeroPulse 4.5s ease-in-out infinite reverse}
+.brand-hero-brain{position:relative;z-index:2;width:min(100%,360px);max-height:365px;object-fit:contain;filter:drop-shadow(0 23px 22px #5979cf3d);animation:brandHeroFloat 6s ease-in-out infinite}
+.brand-hero-orbit{position:absolute;z-index:1;width:110%;height:36%;border:1px solid #7896e955;border-radius:50%;transform:rotate(-16deg);animation:brandHeroOrbit 14s linear infinite}
+.brand-hero-orbit-one{width:115%;height:42%}.brand-hero-orbit-two{width:76%;height:104%;transform:rotate(52deg);animation-duration:18s;animation-direction:reverse}.brand-hero-orbit-three{width:130%;height:24%;transform:rotate(34deg);animation-duration:20s}
+@keyframes brandHeroFloat{0%,100%{transform:translate3d(0,4px,0) rotate(-4deg)}50%{transform:translate3d(0,-15px,0) rotate(-1deg)}}
+@keyframes brandHeroPulse{0%,100%{opacity:.58;transform:scale(.94)}50%{opacity:1;transform:scale(1.08)}}
+@keyframes brandHeroOrbit{from{rotate:0deg}to{rotate:360deg}}
+.brand-mark-image{width:34px;height:34px;object-fit:contain;border-radius:9px;background:#eef4ff;display:block}
+@media (max-width:720px){.brand-hero-visual{grid-template-columns:1fr;padding:34px 28px;min-height:560px}.brand-hero-copy{max-width:none}.brand-hero-copy p{margin:14px 0}.brand-hero-stage{min-height:300px}.brand-hero-brain{width:min(100%,300px)}}
+@media (prefers-reduced-motion:reduce){.brand-hero-brain,.brand-hero-orbit,.brand-hero-stage:before,.brand-hero-glow{animation:none}}

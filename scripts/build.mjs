@@ -9,6 +9,7 @@ import {productPage} from '../src/pages/product.mjs';
 import {aboutPage} from '../src/pages/about.mjs';
 import {contactPage} from '../src/pages/contact.mjs';
 import {privacyPage,notFoundPage} from '../src/pages/privacy.mjs';
+import {brandMark} from '../src/templates/icons.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const dist=path.join(root,'dist');
@@ -16,7 +17,7 @@ await rm(dist,{recursive:true,force:true});
 await mkdir(dist,{recursive:true});
 await cp(path.join(root,'public'),dist,{recursive:true});
 const pages=[
-  ['index.html',{title:'Intelligence with a human purpose',body:homePage().replace('assets/images/intelligence-orb.svg','assets/images/clarionxsi-logo.png').replace('A sculptural blue orbital form made from interconnected ribbons','Bright blue ClarionXSI logo with a glowing circuit-and-tree brain')}],
+  ['index.html',{title:'Intelligence with a human purpose',body:homePage().replace(/<img class="orb-image"[^>]*>/,'<div class="brand-hero-visual" aria-label="ClarionX Super Intelligence brain logo"><div class="brand-hero-copy"><span class="brand-hero-kicker">CLARIONXSI / SUPER INTELLIGENCE</span><h2>ClarionX Super<br><em>Intelligence</em></h2><p>Human-centered intelligence, connected across every direction.</p><span class="brand-hero-signature">ClarionXSI</span></div><div class="brand-hero-stage"><span class="brand-hero-orbit brand-hero-orbit-one"></span><span class="brand-hero-orbit brand-hero-orbit-two"></span><span class="brand-hero-orbit brand-hero-orbit-three"></span><span class="brand-hero-glow"></span><img class="brand-hero-brain" src="assets/images/clarionxsi-super-intelligence-brain.png" alt="ClarionXSI glowing circuit and neural brain logo"></div></div>').replace(/<div class="art-topline">.*?<\/div>/,'').replace(/<div class="art-note">.*?<\/div><div class="art-bottomline">.*?<\/div>/,'')}],
   ['products.html',{title:'Our products',page:'products',body:productsPage()}],
   ['about.html',{title:'Our company',page:'about',body:aboutPage()}],
   ['contact.html',{title:'Prepare an enquiry',page:'contact',body:contactPage()}],
@@ -24,5 +25,5 @@ const pages=[
   ['404.html',{title:'Page not found',page:'404',body:notFoundPage()}],
   ...products.map(p=>[`product-${p.slug}.html`,{title:p.name,description:p.summary,page:`product-${p.slug}`,body:productPage(p)}])
 ];
-for(const [filename,options] of pages) await writeFile(path.join(dist,filename),layout(options));
+for(const [filename,options] of pages) await writeFile(path.join(dist,filename),layout(options).replaceAll(brandMark,'<img class="brand-mark-image" src="assets/images/clarionxsi-brain.png" alt="ClarionXSI logo">'));
 console.log(`Built ${pages.length} pages and local assets into dist/. No dependencies or network access required.`);
