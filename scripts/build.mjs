@@ -1,0 +1,28 @@
+import {mkdir,rm,cp,writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {layout} from '../src/templates/layout.mjs';
+import {products} from '../src/data/products.mjs';
+import {homePage} from '../src/pages/home.mjs';
+import {productsPage} from '../src/pages/products.mjs';
+import {productPage} from '../src/pages/product.mjs';
+import {aboutPage} from '../src/pages/about.mjs';
+import {contactPage} from '../src/pages/contact.mjs';
+import {privacyPage,notFoundPage} from '../src/pages/privacy.mjs';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dist=path.join(root,'dist');
+await rm(dist,{recursive:true,force:true});
+await mkdir(dist,{recursive:true});
+await cp(path.join(root,'public'),dist,{recursive:true});
+const pages=[
+  ['index.html',{title:'Intelligence with a human purpose',body:homePage()}],
+  ['products.html',{title:'Our products',page:'products',body:productsPage()}],
+  ['about.html',{title:'Our company',page:'about',body:aboutPage()}],
+  ['contact.html',{title:'Prepare an enquiry',page:'contact',body:contactPage()}],
+  ['privacy.html',{title:'Privacy',page:'privacy',body:privacyPage()}],
+  ['404.html',{title:'Page not found',page:'404',body:notFoundPage()}],
+  ...products.map(p=>[`product-${p.slug}.html`,{title:p.name,description:p.summary,page:`product-${p.slug}`,body:productPage(p)}])
+];
+for(const [filename,options] of pages) await writeFile(path.join(dist,filename),layout(options));
+console.log(`Built ${pages.length} pages and local assets into dist/. No dependencies or network access required.`);
