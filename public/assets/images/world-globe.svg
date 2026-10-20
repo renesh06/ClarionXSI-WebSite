@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" fill="none">
+  <title>Blue world globe</title>
+  <defs>
+    <radialGradient id="ocean" cx=".3" cy=".22" r=".85">
+      <stop stop-color="#a2eaff"/><stop offset=".4" stop-color="#3ba5ed"/><stop offset=".75" stop-color="#2857cc"/><stop offset="1" stop-color="#162d7a"/>
+    </radialGradient>
+    <linearGradient id="land" x1="60" y1="40" x2="185" y2="190" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f0ffff"/><stop offset=".5" stop-color="#b2eee9"/><stop offset="1" stop-color="#6acdcf"/>
+    </linearGradient>
+    <radialGradient id="shade" cx=".35" cy=".3" r=".75"><stop offset=".55" stop-color="#112565" stop-opacity="0"/><stop offset="1" stop-color="#112565" stop-opacity=".55"/></radialGradient>
+    <clipPath id="sphere"><circle cx="120" cy="120" r="103"/></clipPath>
+  </defs>
+  <circle cx="120" cy="120" r="105" fill="#b6eaff"/>
+  <g clip-path="url(#sphere)">
+    <circle cx="120" cy="120" r="103" fill="url(#ocean)"/>
+    <g stroke="#d6f5ff" stroke-width="1" opacity=".23">
+      <ellipse cx="120" cy="120" rx="45" ry="103"/><ellipse cx="120" cy="120" rx="83" ry="103"/>
+      <ellipse cx="120" cy="120" rx="103" ry="38"/><path d="M19 120h202M120 17v206M31 69q89 35 178 0M31 171q89-35 178 0"/>
+    </g>
+    <g fill="url(#land)" stroke="#e1ffff" stroke-width=".8" stroke-linejoin="round">
+      <!-- Europe and Scandinavia -->
+      <path d="m90 73 5-13 10-3 5-17 9-9 6 5-5 19-8 9 7 4 11-6 14 5 1 11-12 5-9-3-5 7-7-4-2 8-8-8-12 1-7-5 2-5z"/>
+      <path d="m79 66 6-8 4 4-2 10-6 3zM77 77l5-2 2 5-5 4zM109 85l6 3 5 10-4 2-7-9z"/>
+      <!-- Africa -->
+      <path d="m91 92 19-3 12 7 14 2 5 16 14 7-7 9-10 4-2 17-11 19-6 15-9 3-7-14-5-19-8-7-1-14-11-4-5-10 5-16z"/>
+      <path d="m145 158 4-5 2 9-5 14-4-3z"/>
+      <!-- Asia and the Arabian peninsula -->
+      <path d="m133 67 10-13 17-7 14-11 19 7 20 16 13 22 7 23-11 7-9-7-13 1-7 12-12-3-5 12-9 1-5-10-8-4-6-15-11-7-7-1 3-10-7-7z"/>
+      <path d="m137 99 13 7 11 15-9 8-12-8-6-13zM163 115l13 4 5 10-7 18-7-14zM187 120l9 5 2 14 10 10-5 4-11-12-4-10zM213 104l4-8 3 5-3 11-4 5zM196 157l12 2 4 4-12 1zM183 153l8 2 5 4-10 1z"/>
+      <!-- Australia, Greenland and the Atlantic edge of South America -->
+      <path d="m190 176 12-7 11 5 9 16-7 12-14-3-9 3-7-9zM57 32l16-8 12 6-4 12-12 9-9-5zM17 122l15 3 14 10 9 3-1 13-8 8-5 17-10 12-5-12 1-19-9-14z"/>
+    </g>
+    <circle cx="120" cy="120" r="103" fill="url(#shade)"/>
+    <path d="M45 66a88 88 0 0 1 86-34" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+  </g>
+  <circle cx="120" cy="120" r="103" stroke="#e0f6ff" stroke-opacity=".65" stroke-width="2"/>
+</svg>
