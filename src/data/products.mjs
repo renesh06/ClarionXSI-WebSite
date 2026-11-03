@@ -28,7 +28,8 @@ export const products = [
     audience:'Individuals, teams, and enterprises',
     focus:[{title:'For individuals',text:'An AI application for people exploring how intelligence can support their everyday work.'},{title:'For enterprises',text:'An enterprise-facing AI application within the same ClarionX ONE product identity.'},{title:'One super application',text:'A central application experience in the wider ClarionXSI product family.'}],
     statement:'Your gateway to the ClarionX AI ecosystem.',
-    related:['sram','agents','hub']
+    related:['sram','agents','hub'],
+    appUrl:'https://www.clarionx.net/'
   },
   {
     slug:'sram', name:'ClarionX SRAM', short:'SRAM', category:'ai', categoryLabel:'AI model family', icon:'chip', accent:'violet',
@@ -41,14 +42,16 @@ export const products = [
     related:['one','research','agents']
   },
   {
-    slug:'agents', name:'ClarionX Agents', short:'Agents', category:'ai', categoryLabel:'Agent platform / runtime', icon:'nodes', accent:'blue',
+    slug:'agents', name:'ClarionX AgentCode', short:'AgentCode', category:'ai', categoryLabel:'Agent platform / runtime', icon:'nodes', accent:'blue',
     summary:'The platform and runtime for AI agents.',
     headline:'Give intelligence a place to act.',
-    intro:'ClarionX Agents is the agent platform and runtime in the ClarionXSI portfolio. Its focus is the environment in which AI agents operate.',
+    intro:'ClarionX AgentCode is the agent platform and runtime within ClarionX ONE. It focuses on providing the agent harness in which AI agents operate.',
     audience:'Teams exploring agent platforms and runtimes',
     focus:[{title:'Agent platform',text:'The dedicated product for the agent platform within ClarionXSI.'},{title:'Agent runtime',text:'A runtime focus for the execution of agent-based experiences.'},{title:'Part of the ecosystem',text:'Explore alongside ClarionX ONE, SRAM, and Hub.'}],
     statement:'A dedicated home for agent-based experiences.',
-    related:['one','hub','sram']
+    related:['one','hub','sram'],
+    appUrl:'https://www.clarionx.net/?view=agentcode&amp;agent=agent_multiagent_orchestrator',
+    heroProductName:'Multi-agent Orchestration'
   },
   {
     slug:'research', name:'ClarionX Research', short:'Research', category:'ai', categoryLabel:'Frontier AI research', icon:'orbit', accent:'violet',
@@ -66,7 +69,7 @@ export const products = [
     headline:'Where applications come together.',
     intro:'ClarionX Hub is the Application Integration Platform in the ClarionXSI product family. It is the portfolio’s dedicated focus for application integration.',
     audience:'Teams exploring application integration',
-    focus:[{title:'Application integration',text:'A dedicated platform identity for bringing applications together.'},{title:'Connected experiences',text:'An integration focus within the broader ClarionXSI vision.'},{title:'A distinct platform',text:'Hub sits alongside ONE, Agents, and the other ClarionXSI products.'}],
+    focus:[{title:'Application integration',text:'A dedicated platform identity for bringing applications together.'},{title:'Connected experiences',text:'An integration focus within the broader ClarionXSI vision.'},{title:'A distinct platform',text:'Hub sits alongside ONE, AgentCode, and the other ClarionXSI products.'}],
     statement:'Make room for a more connected application world.',
     related:['one','agents','stay']
   },
@@ -91,12 +94,12 @@ export const products = [
     related:['stay','apexphysio','one']
   },
   {
-    slug:'apexphysio', name:'Apexphysio Rehabilitation', short:'Apexphysio', category:'services', categoryLabel:'Physiotherapy & rehabilitation', icon:'activity', accent:'rose',
+    slug:'apexphysio', name:'ClarionX Apexphysio', short:'Apexphysio', category:'services', categoryLabel:'Physiotherapy & rehabilitation', icon:'activity', accent:'rose',
     summary:'Doctor bookings and treatment for physiotherapy.',
     headline:'Care that helps you move forward.',
-    intro:'Apexphysio Rehabilitation is the physiotherapy offering in the ClarionXSI portfolio, focused on doctor bookings and physiotherapy treatment.',
+    intro:'ClarionX Apexphysio is the physiotherapy offering in the ClarionXSI portfolio, focused on doctor bookings and physiotherapy treatment.',
     audience:'People seeking physiotherapy consultations and treatment',
-    focus:[{title:'Doctor bookings',text:'An offering focused on arranging physiotherapy consultations.'},{title:'Physiotherapy treatment',text:'Physiotherapy is the core treatment focus of Apexphysio Rehabilitation.'},{title:'Rehabilitation',text:'A dedicated rehabilitation identity within the company’s portfolio.'}],
+    focus:[{title:'Doctor bookings',text:'An offering focused on arranging physiotherapy consultations.'},{title:'Physiotherapy treatment',text:'Physiotherapy is the core treatment focus of ClarionX Apexphysio.'},{title:'Rehabilitation',text:'A dedicated rehabilitation identity within the company’s portfolio.'}],
     statement:'A dedicated place for physiotherapy and rehabilitation.',
     related:['seva','stay','one']
   }

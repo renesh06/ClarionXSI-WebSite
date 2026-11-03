@@ -34,7 +34,7 @@ Once a verified contact destination is available, replace the local enquiry expo
 
 ## Product applications and appointments
 
-Each product page currently links to a relevant enquiry. Configure verified product URLs to launch the corresponding applications. A company product description does not establish that an application or service is available for a visitor’s location. In particular, Apexphysio requires its own actual booking and clinical workflow before appointments can be confirmed.
+Each product page currently links to a relevant enquiry. Configure verified product URLs to launch the corresponding applications. A company product description does not establish that an application or service is available for a visitor’s location. In particular, ClarionX Apexphysio requires its own actual booking and clinical workflow before appointments can be confirmed.
 
 ## Hosted edition
 

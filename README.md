@@ -26,12 +26,12 @@ ClarionX Super Intelligence is the corporate / parent company. The website inclu
 | --- | --- |
 | ClarionX ONE | Consumer + enterprise AI super application |
 | ClarionX SRAM | Self-Reasoning Retrieval Augmented Model |
-| ClarionX Agents | Agent platform / runtime |
+| ClarionX AgentCode | Agent platform / runtime |
 | ClarionX Research | Frontier AI research |
 | ClarionX Hub | Application Integration Platform |
 | ClarionX Stay | Hostels Management System |
 | ClarionX Seva | Electrical, carpenter, plumbing, and household services |
-| Apexphysio Rehabilitation | Doctor bookings and treatment for physiotherapy |
+| ClarionX Apexphysio | Doctor bookings and treatment for physiotherapy |
 
 All six SRAM names are included: **Nano, Lite, Plus, Pro, Ultra, Ultra Frontier**.
 

@@ -9,7 +9,9 @@
     "start": "node scripts/build.mjs && node scripts/serve.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",
     "verify": "node scripts/verify.mjs",
-    "test": "node scripts/build.mjs && node scripts/verify.mjs"
+    "test": "node scripts/build.mjs && node scripts/verify.mjs",
+    "deploy": "node scripts/build.mjs && npx wrangler deploy",
+    "deploy:pages": "node scripts/build.mjs && npx wrangler pages deploy dist --project-name clarionxsi-website"
   },
   "engines": { "node": ">=20" }
 }
