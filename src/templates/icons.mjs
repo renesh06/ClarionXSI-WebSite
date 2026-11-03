@@ -19,7 +19,10 @@ const shapes = {
   box:'<path d="m12 2 9 5v10l-9 5-9-5V7l9-5ZM3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/>',
   download:'<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
   copy:'<rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>',
-  chevron:'<path d="m9 5 7 7-7 7"/>'
+  chevron:'<path d="m9 5 7 7-7 7"/>',
+  core:'<circle cx="12" cy="12" r="4"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3m-3.5-6.5-2.1 2.1m-8.8 8.8-2.1 2.1m0-13 2.1 2.1m8.8 8.8 2.1 2.1"/>',
+  layers:'<polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/>',
+  users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>'
 };
 export function icon(name, className='') {return `<svg class="icon ${className}" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${shapes[name]||shapes.sparkles}</svg>`;}
 export const brandMark = '<svg class="brand-mark" width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M10 5h9l11 15-11 15h-9l11-15L10 5Z" fill="currentColor"/><path d="M2 5h5l11 15L7 35H2l11-15L2 5Z" fill="currentColor" opacity=".38"/><path d="M25 5h9L23 20l11 15h-9L14 20 25 5Z" fill="currentColor" opacity=".65"/></svg>';

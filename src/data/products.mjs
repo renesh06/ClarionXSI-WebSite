@@ -28,7 +28,7 @@ export const products = [
     audience:'Individuals, teams, and enterprises',
     focus:[{title:'For individuals',text:'An AI application for people exploring how intelligence can support their everyday work.'},{title:'For enterprises',text:'An enterprise-facing AI application within the same ClarionX ONE product identity.'},{title:'One super application',text:'A central application experience in the wider ClarionXSI product family.'}],
     statement:'Your gateway to the ClarionX AI ecosystem.',
-    related:['sram','agents','hub'],
+    related:['sram','foundry','alwon'],
     appUrl:'https://www.clarionx.net/'
   },
   {
@@ -39,7 +39,17 @@ export const products = [
     audience:'People and teams exploring the SRAM model family',
     focus:[{title:'Self-Reasoning',text:'The reasoning focus at the heart of the SRAM name.'},{title:'Retrieval Augmented',text:'Retrieval augmentation is part of the model family’s identity.'},{title:'Six family members',text:'A clearly named family from SRAM Nano through SRAM Ultra Frontier.'}],
     statement:'Meet every member of the SRAM family.',
-    related:['one','research','agents']
+    related:['one','foundry','research']
+  },
+  {
+    slug:'foundry', name:'ClarionX Foundry', short:'Foundry', category:'ai', categoryLabel:'AI model forge & workshop', icon:'layers', accent:'amber',
+    summary:'The platform to build, fine-tune, and forge enterprise AI models.',
+    headline:'Forge your AI future.',
+    intro:'ClarionX Foundry provides the infrastructure and tools to build, fine-tune, adapt, and deploy specialized AI models tailored to unique domains and enterprise demands.',
+    audience:'AI engineers, domain experts, and innovative enterprises',
+    focus:[{title:'Model customization',text:'Tools to specialize and adapt foundation models to dedicated organizational knowledge.'},{title:'Evaluation & alignment',text:'Rigorous benchmarking and alignment pipelines for safe, reliable intelligence.'},{title:'Foundry infrastructure',text:'Scalable model training and deployment integrated across ClarionXSI.'}],
+    statement:'The engine room for customized artificial intelligence.',
+    related:['sram','agents','alwon']
   },
   {
     slug:'agents', name:'ClarionX AgentCode', short:'AgentCode', category:'ai', categoryLabel:'Agent platform / runtime', icon:'nodes', accent:'blue',
@@ -49,9 +59,19 @@ export const products = [
     audience:'Teams exploring agent platforms and runtimes',
     focus:[{title:'Agent platform',text:'The dedicated product for the agent platform within ClarionXSI.'},{title:'Agent runtime',text:'A runtime focus for the execution of agent-based experiences.'},{title:'Part of the ecosystem',text:'Explore alongside ClarionX ONE, SRAM, and Hub.'}],
     statement:'A dedicated home for agent-based experiences.',
-    related:['one','hub','sram'],
+    related:['foundry','hub','sram'],
     appUrl:'https://www.clarionx.net/?view=agentcode&amp;agent=agent_multiagent_orchestrator',
     heroProductName:'Multi-agent Orchestration'
+  },
+  {
+    slug:'alwon', name:'ClarionX Alwon', short:'Alwon', category:'ai', categoryLabel:'AI intelligence platform', icon:'core', accent:'violet',
+    summary:'Advanced AI reasoning and intelligent systems for modern enterprises.',
+    headline:'Intelligence shaped for discovery.',
+    intro:'ClarionX Alwon is an advanced AI intelligence system designed to empower discovery, multi-step reasoning, and complex problem-solving across the ClarionXSI ecosystem.',
+    audience:'Enterprises, researchers, and developers exploring advanced AI',
+    focus:[{title:'Advanced reasoning',text:'Engineered to handle multi-step reasoning and deep contextual intelligence.'},{title:'Enterprise intelligence',text:'Scalable AI capabilities tailored for mission-critical workflows.'},{title:'Unified ecosystem',text:'Built to seamlessly integrate with ClarionX ONE, SRAM, and AgentCode.'}],
+    statement:'Expanding the horizon of applied artificial intelligence.',
+    related:['foundry','research','agents']
   },
   {
     slug:'research', name:'ClarionX Research', short:'Research', category:'ai', categoryLabel:'Frontier AI research', icon:'orbit', accent:'violet',
@@ -61,7 +81,8 @@ export const products = [
     audience:'Researchers and people interested in frontier AI',
     focus:[{title:'Frontier AI',text:'A dedicated focus on the evolving frontier of artificial intelligence.'},{title:'Research identity',text:'The home for the research direction within the ClarionXSI portfolio.'},{title:'Explore the family',text:'Learn about the related SRAM model family and AI products.'}],
     statement:'Space for the questions that come next.',
-    related:['sram','agents','one']
+    related:['alwon','sram','agents'],
+    appUrl:'https://clarionx-research.rk-system.workers.dev/'
   },
   {
     slug:'hub', name:'ClarionX Hub', short:'Hub', category:'platforms', categoryLabel:'Application integration platform', icon:'grid', accent:'teal',
@@ -71,7 +92,18 @@ export const products = [
     audience:'Teams exploring application integration',
     focus:[{title:'Application integration',text:'A dedicated platform identity for bringing applications together.'},{title:'Connected experiences',text:'An integration focus within the broader ClarionXSI vision.'},{title:'A distinct platform',text:'Hub sits alongside ONE, AgentCode, and the other ClarionXSI products.'}],
     statement:'Make room for a more connected application world.',
-    related:['one','agents','stay']
+    related:['crm','stay','one']
+  },
+  {
+    slug:'crm', name:'ClarionX CRM', short:'CRM', category:'platforms', categoryLabel:'Customer relationship management', icon:'users', accent:'blue',
+    summary:'Intelligent customer relationship management for modern connected businesses.',
+    headline:'Stronger relationships. Smarter connections.',
+    intro:'ClarionX CRM brings intelligent customer relationship management into the ClarionXSI platform family, unifying customer insights, communication, and pipeline automation.',
+    audience:'Businesses, sales teams, and customer service organizations',
+    focus:[{title:'Customer insights',text:'Comprehensive relationship tracking and intelligence to understand client needs.'},{title:'Intelligent workflows',text:'Automated pipelines and interaction histories powered by ClarionXSI technology.'},{title:'Platform integration',text:'Seamlessly connects with ClarionX Hub, Stay, and corporate systems.'}],
+    statement:'Transforming customer engagement with connected intelligence.',
+    related:['hub','stay','one'],
+    appUrl:'https://clarionx-crm.rk-system.workers.dev/'
   },
   {
     slug:'stay', name:'ClarionX Stay', short:'Stay', category:'platforms', categoryLabel:'Hostels management system', icon:'building', accent:'amber',
@@ -81,7 +113,8 @@ export const products = [
     audience:'Hostel owners and management teams',
     focus:[{title:'Hostel management',text:'A product dedicated to the management of hostels.'},{title:'For management teams',text:'A focused part of the portfolio for people who manage hostel properties.'},{title:'Everyday applications',text:'A practical application of the ClarionXSI vision beyond AI products.'}],
     statement:'A focused product for the places people stay.',
-    related:['hub','seva','one']
+    related:['crm','hub','seva'],
+    appUrl:'https://manage-my-hostels.rk-system.workers.dev/'
   },
   {
     slug:'seva', name:'ClarionX Seva', short:'Seva', category:'services', categoryLabel:'Home & household services', icon:'home', accent:'teal',

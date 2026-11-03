@@ -10,12 +10,24 @@ export function productPage(p){
     ? `<a class="button button-primary" href="${p.appUrl}" target="_blank" rel="noopener noreferrer">Click ClarionX ONE ${icon('northeast')}</a><a class="button button-outline" href="contact.html?product=${p.slug}">Enquire about ${p.short} ${icon('arrow')}</a><a class="text-link" href="#product-focus">Explore the focus ${icon('chevron')}</a>`
     : p.slug === 'agents'
     ? `<a class="button button-primary" href="${p.appUrl}" target="_blank" rel="noopener noreferrer">Click AgentCode ${icon('arrow')}</a><a class="text-link" href="#product-focus">Explore the focus ${icon('chevron')}</a>`
+    : p.slug === 'stay'
+    ? `<a class="button button-primary" href="${p.appUrl}" target="_blank" rel="noopener noreferrer">Click ClarionX Stay ${icon('arrow')}</a><a class="text-link" href="#product-focus">Explore the focus ${icon('chevron')}</a>`
+    : p.slug === 'crm'
+    ? `<a class="button button-primary" href="${p.appUrl}" target="_blank" rel="noopener noreferrer">Click ClarionX CRM ${icon('arrow')}</a><a class="text-link" href="#product-focus">Explore the focus ${icon('chevron')}</a>`
+    : p.slug === 'research'
+    ? `<a class="button button-primary" href="${p.appUrl}" target="_blank" rel="noopener noreferrer">Click ClarionX Research ${icon('arrow')}</a><a class="text-link" href="#product-focus">Explore the focus ${icon('chevron')}</a>`
     : `<a class="button button-primary" href="contact.html?product=${p.slug}">Enquire about ${p.short} ${icon('arrow')}</a><a class="text-link" href="${p.slug==='sram'?'#model-family':p.slug==='seva'?'#services':'#product-focus'}">${p.slug==='sram'?'Meet the family':p.slug==='seva'?'Explore services':'Explore the focus'} ${icon('chevron')}</a>`;
 
   const posterContent = p.slug === 'one'
     ? `<a class="poster-core-button" href="${p.appUrl}" target="_blank" rel="noopener noreferrer" aria-label="navigate to ClarionX ONE"><div class="poster-symbol">${icon(p.icon)}</div><strong class="poster-app-title">navigate to ClarionX ONE</strong></a>`
     : p.slug === 'agents'
     ? `<a class="poster-core-button" href="${p.appUrl}" target="_blank" rel="noopener noreferrer" aria-label="AgentCode"><div class="poster-symbol">${icon(p.icon)}</div><strong>AgentCode</strong><span class="poster-subtitle">${p.categoryLabel}</span></a>`
+    : p.slug === 'stay'
+    ? `<a class="poster-core-button" href="${p.appUrl}" target="_blank" rel="noopener noreferrer" aria-label="Click ClarionX Stay"><div class="poster-symbol">${icon(p.icon)}</div><strong>Click ClarionX Stay</strong><span class="poster-subtitle">${p.categoryLabel}</span></a>`
+    : p.slug === 'crm'
+    ? `<a class="poster-core-button" href="${p.appUrl}" target="_blank" rel="noopener noreferrer" aria-label="Click CRM"><div class="poster-symbol">${icon(p.icon)}</div><strong>Click CRM</strong><span class="poster-subtitle">${p.categoryLabel}</span></a>`
+    : p.slug === 'research'
+    ? `<a class="poster-core-button" href="${p.appUrl}" target="_blank" rel="noopener noreferrer" aria-label="Click Research"><div class="poster-symbol">${icon(p.icon)}</div><strong>Click Research</strong><span class="poster-subtitle">${p.categoryLabel}</span></a>`
     : `<div class="poster-symbol">${icon(p.icon)}</div><strong>${p.short}</strong><span class="poster-subtitle">${p.categoryLabel}</span>`;
 
   return `
