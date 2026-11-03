@@ -2,6 +2,7 @@
  * ClarionX Super Intelligence (ClarionXSI) - Cloudflare Worker & Backend API
  * Handles static assets, REST API endpoints, and Cloudflare D1 database operations.
  */
+import { products } from './data/products.mjs';
 
 export default {
   async fetch(request, env, ctx) {
@@ -52,56 +53,14 @@ export default {
 
       // 2. Products Metadata Endpoint
       if (url.pathname === '/api/products' && request.method === 'GET') {
-        const ecosystemProducts = [
-          {
-            slug: 'one',
-            name: 'ClarionX ONE',
-            category: 'ai-workspace',
-            summary: 'The unified multi-agent AI interface for individuals and enterprises.'
-          },
-          {
-            slug: 'sram',
-            name: 'SRAM Models',
-            category: 'neural-models',
-            summary: 'The SRAM neural model family ranging from Nano 2B to Ultra Frontier 27B+.'
-          },
-          {
-            slug: 'agents',
-            name: 'ClarionX AgentCode',
-            category: 'autonomous-agents',
-            summary: 'Autonomous software engineering, reasoning, and test-driven development agents.'
-          },
-          {
-            slug: 'research',
-            name: 'Research Lab',
-            category: 'ai-research',
-            summary: 'Pioneering frontier alignment, synthetic training datasets, and neural reasoning.'
-          },
-          {
-            slug: 'hub',
-            name: 'Integration Hub',
-            category: 'enterprise-integrations',
-            summary: 'Enterprise connectivity with pre-built connectors and custom API gateways.'
-          },
-          {
-            slug: 'hostel',
-            name: 'Hostel Management',
-            category: 'vertical-saas',
-            summary: 'Comprehensive accommodation management, digital check-in, and billing operations.'
-          },
-          {
-            slug: 'seva',
-            name: 'Seva Home Services',
-            category: 'domestic-services',
-            summary: 'On-demand home maintenance, vetted technicians, cleaning, and repair solutions.'
-          },
-          {
-            slug: 'apexphysio',
-            name: 'ClarionX Apexphysio',
-            category: 'clinical-health',
-            summary: 'Advanced AI motion tracking, assessment, and targeted clinical rehabilitation.'
-          }
-        ];
+        const ecosystemProducts = products.map(p => ({
+          slug: p.slug,
+          name: p.name,
+          category: p.category,
+          categoryLabel: p.categoryLabel,
+          summary: p.summary,
+          appUrl: p.appUrl || null
+        }));
 
         return new Response(JSON.stringify({
           success: true,
